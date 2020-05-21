@@ -116,8 +116,8 @@ class War2P(Game):
 		trickWinner.winCards(pot)		
 		self.currentScore()
 
-war = War2P()
-war.startGame("crystal","elina")
-war.currentScore()
-while war.inPlay == True:
-	war.playRound()
+# war = War2P()
+# war.startGame("crystal","elina")
+# war.currentScore()
+# while war.inPlay == True:
+# 	war.playRound()
