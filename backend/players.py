@@ -1,16 +1,21 @@
 class Player:
-	def __init__(self, name, position):
+	def __init__(self, name, position, handVisible = True):
 		self.name = name
 		self.position = position
 		self.hand = []
+		self.handVisible = handVisible
 
 	def draw(self, deck):
 		self.hand.append(deck.drawCard())
 
 	def showHand(self):
-		for card in self.hand:
- 			print(str(card), end=" ")
-		print("\n")
+		if self.handVisible:
+			for card in self.hand:
+	 			print(str(card), end=" ")
+			print("\n")
+		else:
+			print("You cannot look at your hand.")
+
 
 class Table:
 	def __init__(self, tableLimit):
@@ -26,3 +31,4 @@ class Table:
 	def showTable(self):
 		for player in self.players:
 			print(player.name)
+

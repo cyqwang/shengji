@@ -1,9 +1,10 @@
-from deck import *
-from player import * 
+from cards import *
+from players import * 
 
 class Game:
 
 	def __init__(self, numPlayers, high = "A", trumpSuit = None, trumpValue = None, jokers = True):
+		self.numPlayers = numPlayers
 		self.deck = Deck(jokers)
 		self.table = Table(numPlayers)
 		self.ordering = {}
@@ -37,13 +38,5 @@ class Game:
 
 		return
 
-class War(Game):
-
-	def __init__(self):
-		self.game = Game(2)
-
-game = Game(2, high = "A", trumpSuit = "C", trumpValue = "2")
-game.table.sitAtTable("crystal")
-game.table.sitAtTable("elina")
-for card in game.deck.deck:
-	print(str(card), game.ordering[card])
+	def deal(self):
+		pass

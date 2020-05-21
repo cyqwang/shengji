@@ -27,6 +27,9 @@ class Deck:
 		for card in self.deck:
 			print(card)
 
+	def numCards(self):
+		return len(self.deck)
+
 	def shuffle(self):
 		for i in range(len(self.deck)-1, 0, -1):
 			r = random.randint(0,i)
@@ -34,3 +37,8 @@ class Deck:
 
 	def drawCard(self):
 		return self.deck.pop()
+
+# class setOfCards:
+
+# 	def __init__(self, canView = False, canShuffle = True, canSort = True):
+# 		self.cars = []
