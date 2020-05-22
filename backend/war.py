@@ -18,9 +18,6 @@ class WarPlayer(Player):
 		else:
 			return None
 
-	def winCards(self, cards):
-		self.wonCards.extend(cards)
-
 	def shuffle(self):
 		for i in range(len(self.wonCards)-1, 0, -1):
 			r = random.randint(0,i)

@@ -9,6 +9,9 @@ class Player:
 	def draw(self, deck):
 		self.hand.append(deck.drawCard())
 
+	def winCards(self, cards):
+		self.wonCards.extend(cards)
+
 	def showHand(self):
 		if self.handVisible:
 			for card in self.hand:
