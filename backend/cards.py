@@ -9,6 +9,12 @@ class Card:
 	def __str__(self):
 		return self.value+self.suit
 
+	def __eq__(self, other):
+		return other.value == self.value and other.suit == self.suit
+
+	def __hash__(self):
+		return hash((self.value, self.suit))
+
 class Deck:
 
 	def __init__(self, jokers = True):

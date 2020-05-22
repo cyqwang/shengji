@@ -6,7 +6,6 @@ import time
 class WarPlayer(Player):
 	def __init__(self, name, position):
 		Player.__init__(self, name, position, False)
-		self.wonCards = []
 
 	def removeTopCard(self):
 		if len(self.hand) > 0:
@@ -113,8 +112,7 @@ class War2P(Game):
 				for player in self.table.players:
 					pot.extend(player.war())
 		print(trickWinner.name, "won the trick!")
-		trickWinner.winCards(pot)		
-		self.currentScore()
+		trickWinner.winCards(pot)
 
 # war = War2P()
 # war.startGame("crystal","elina")

@@ -4,6 +4,7 @@ class Player:
 		self.position = position
 		self.hand = []
 		self.handVisible = handVisible
+		self.wonCards = []
 
 	def draw(self, deck):
 		self.hand.append(deck.drawCard())
